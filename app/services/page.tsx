@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import CTA from "@/components/CTA";
 import Newsletter from "@/components/Newsletter";
+import Image from "next/image";
 
 import {
   Monitor,
@@ -28,46 +29,88 @@ export default function ServicesPage() {
 
         <div className="container-main relative z-10">
 
-          <Reveal>
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-5 h-[1px] bg-[#c9ba9b]" />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9ba9b]">
-                Services
-              </p>
+            {/* LEFT CONTENT */}
+            <div>
+
+              <Reveal>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-5 h-[1px] bg-[#c9ba9b]" />
+
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9ba9b]">
+                    Services
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <h1
+                  className="
+                    serif
+                    text-[clamp(64px,7vw,118px)]
+                    leading-[0.9]
+                    tracking-[-0.04em]
+                    max-w-[1100px]
+                    text-[#f3efe7]
+                  "
+                >
+                  Transform Your
+                  <br />
+
+                  <em className="italic text-[#d2c0a0] font-normal">
+                    Business
+                  </em>
+
+                  <br />
+
+                  With Smart ERP
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <p className="cormorant text-[20px] italic leading-[1.8] text-white/40 max-w-[760px] mt-22">
+                  Rajwada Infotech Services specializes in developing powerful ERP
+                  solutions that help businesses manage their operations efficiently.
+                </p>
+              </Reveal>
+
             </div>
-          </Reveal>
 
-          <Reveal delay={0.1}>
-            <h1
-              className="
-                serif
-                text-[clamp(64px,7vw,118px)]
-                leading-[0.9]
-                tracking-[-0.04em]
-                max-w-[1100px]
-                text-[#f3efe7]
-              "
-            >
-              Transform Your
-              <br />
+            {/* RIGHT IMAGE */}
+            <Reveal delay={0.3}>
+              <div className="relative flex justify-center lg:justify-end">
 
-              <em className="italic text-[#d2c0a0] font-normal">
-                Business
-              </em>
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-[#c9ba9b]/10
+                    blur-[120px]
+                    rounded-full
+                  "
+                />
 
-              <br />
+               <Image
+  src="/images/services.png"
+  alt="Services"
+  width={500}
+  height={500}
+  className="
+    relative
+    z-10
+    w-[650px]
+    h-auto
+    object-contain
+    drop-shadow-[0_0_40px_rgba(201,186,155,0.15)]
+  "
+  priority
+/>
 
-              With Smart ERP
-            </h1>
-          </Reveal>
+              </div>
+            </Reveal>
 
-          <Reveal delay={0.2}>
-            <p className="cormorant text-[20px] italic leading-[1.8] text-white/40 max-w-[760px] mt-22">
-              Rajwada Infotech Services specializes in developing powerful ERP
-              solutions that help businesses manage their operations efficiently.
-            </p>
-          </Reveal>
+          </div>
 
         </div>
       </section>
@@ -237,7 +280,6 @@ export default function ServicesPage() {
                       "
                     >
 
-                      {/* Number */}
                       <div
                         className="
                           serif
@@ -253,7 +295,6 @@ export default function ServicesPage() {
                         {item.number}
                       </div>
 
-                      {/* Icon */}
                       <div
                         className="
                           w-10
@@ -273,7 +314,6 @@ export default function ServicesPage() {
                         />
                       </div>
 
-                      {/* Title */}
                       <h3
                         className="
                           text-[22px]
@@ -285,7 +325,6 @@ export default function ServicesPage() {
                         {item.title}
                       </h3>
 
-                      {/* Description */}
                       <div className="mt-auto">
                         <p
                           className="
@@ -317,7 +356,6 @@ export default function ServicesPage() {
                       "
                     >
 
-                      {/* Number */}
                       <div
                         className="
                           serif
@@ -330,7 +368,6 @@ export default function ServicesPage() {
                         {item.number}
                       </div>
 
-                      {/* Icon */}
                       <div
                         className="
                           w-10
@@ -350,7 +387,6 @@ export default function ServicesPage() {
                         />
                       </div>
 
-                      {/* Title */}
                       <h3
                         className="
                           text-[22px]
@@ -362,7 +398,6 @@ export default function ServicesPage() {
                         {item.title}
                       </h3>
 
-                      {/* Back Description */}
                       <div className="mt-auto">
                         <p
                           className="
@@ -377,7 +412,6 @@ export default function ServicesPage() {
 
                     </div>
 
-                    {/* Bottom Golden Line */}
                     <div
                       className="
                         absolute
@@ -439,7 +473,6 @@ export default function ServicesPage() {
                     "
                   >
 
-                    {/* Bottom Golden Line */}
                     <div
                       className="
                         absolute

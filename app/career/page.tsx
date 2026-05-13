@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import CTA from "@/components/CTA";
 import Newsletter from "@/components/Newsletter";
+import Image from "next/image";
 
 import {
   Briefcase,
@@ -21,58 +22,126 @@ export default function CareerPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative pt-[170px] pb-32 border-b border-white/10 overflow-hidden">
+      <section className="relative min-h-screen pt-[170px] border-b border-white/10 overflow-hidden">
+
         {/* Glow */}
         <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full bg-[#6f4d23]/10 blur-[140px]" />
 
+        {/* Grid */}
+        <div
+          className="
+            absolute
+            inset-0
+            opacity-[0.03]
+            [background-size:40px_40px]
+            [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)]
+          "
+        />
+
         <div className="container-main relative z-10">
-          <Reveal>
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-5 h-[1px] bg-[#c9ba9b]" />
 
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9ba9b]">
-                Career
-              </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT CONTENT */}
+            <div>
+
+              <Reveal>
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-5 h-[1px] bg-[#c9ba9b]" />
+
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#c9ba9b]">
+                    Career
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <h1
+                  className="
+                    serif
+                    text-[clamp(64px,7vw,118px)]
+                    leading-[0.9]
+                    tracking-[-0.04em]
+                    max-w-[1100px]
+                    text-[#f3efe7]
+                  "
+                >
+                  Join Our
+                  <br />
+
+                  <em className="italic text-[#d2c0a0] font-normal">
+                    Creative
+                  </em>
+
+                  <br />
+
+                  Journey
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <p className="cormorant text-[20px] italic leading-[1.8] text-white/40 max-w-[760px] mt-20">
+                  Build your future with Rajwada Infotech and work on innovative ERP
+                  solutions shaping businesses across India.
+                </p>
+              </Reveal>
+
             </div>
-          </Reveal>
 
-          <Reveal delay={0.1}>
-            <h1
-              className="
-                serif
-                text-[clamp(64px,7vw,118px)]
-                leading-[0.9]
-                tracking-[-0.04em]
-                max-w-[1100px]
-                text-[#f3efe7]
-              "
-            >
-              Join Our
-              <br />
+            {/* RIGHT IMAGE */}
+            <Reveal delay={0.3}>
+              <div className="relative flex justify-center lg:justify-end">
 
-              <em className="italic text-[#d2c0a0] font-normal">
-                Creative
-              </em>
+                {/* Glow */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-[#c9ba9b]/10
+                    blur-[120px]
+                    rounded-full
+                  "
+                />
 
-              <br />
-              Journey
-            </h1>
-          </Reveal>
+                {/* IMAGE CONTAINER */}
+                <div
+                  className="
+                    relative
+                    w-[500px]
+                    h-[500px]
+                    translate-x-10
+                    -translate-y-10
+                  "
+                >
 
-          <Reveal delay={0.2}>
-            <p className="cormorant text-[20px] italic leading-[1.8] text-white/40 max-w-[760px] mt-20">
-              Build your future with Rajwada Infotech and work on innovative ERP
-              solutions shaping businesses across India.
-            </p>
-          </Reveal>
+                  <Image
+                    src="/images/career.png"
+                    alt="Career"
+                    fill
+                    className="
+                      object-contain
+                      drop-shadow-[0_0_40px_rgba(201,186,155,0.15)]
+                    "
+                    priority
+                  />
+
+                </div>
+
+              </div>
+            </Reveal>
+
+          </div>
+
         </div>
       </section>
 
       {/* WHY JOIN */}
       <section className="py-36 border-b border-white/10">
         <div className="container-main">
+
           <Reveal>
             <div className="mb-20">
+
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-6 h-[1px] bg-[#c9ba9b]" />
 
@@ -84,10 +153,12 @@ export default function CareerPage() {
               <h2 className="serif text-[clamp(40px,5vw,64px)] leading-[1.08] max-w-[800px]">
                 A workplace built for innovation, collaboration & growth
               </h2>
+
             </div>
           </Reveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
             {[
               {
                 number: "01",
@@ -120,11 +191,13 @@ export default function CareerPage() {
                 desc:
                   "Experience a productive environment with modern tools and technologies.",
               },
+
             ].map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <Reveal key={index} delay={index * 0.08}>
+
                   <div
                     className="
                       group
@@ -143,6 +216,7 @@ export default function CareerPage() {
                       hover:border-white/20
                     "
                   >
+
                     {/* Number */}
                     <div
                       className="
@@ -188,10 +262,13 @@ export default function CareerPage() {
                         group-hover:w-full
                       "
                     />
+
                   </div>
+
                 </Reveal>
               );
             })}
+
           </div>
         </div>
       </section>
@@ -199,8 +276,10 @@ export default function CareerPage() {
       {/* JOB OPENINGS */}
       <section className="py-36 border-b border-white/10">
         <div className="container-main">
+
           <Reveal>
             <div className="mb-20">
+
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-6 h-[1px] bg-[#c9ba9b]" />
 
@@ -212,10 +291,12 @@ export default function CareerPage() {
               <h2 className="serif text-[clamp(40px,5vw,64px)] leading-[1.08]">
                 Current Opportunities
               </h2>
+
             </div>
           </Reveal>
 
           <div className="grid gap-[2px]">
+
             {[
               "Senior Software Engineer",
               "Frontend Developer",
@@ -223,6 +304,7 @@ export default function CareerPage() {
               "UI/UX Designer",
             ].map((job, index) => (
               <Reveal key={index} delay={index * 0.08}>
+
                 <div
                   className="
                     group
@@ -240,12 +322,17 @@ export default function CareerPage() {
                     hover:border-white/20
                   "
                 >
+
                   <div>
-                    <h3 className="serif text-[28px] mb-3">{job}</h3>
+
+                    <h3 className="serif text-[28px] mb-3">
+                      {job}
+                    </h3>
 
                     <p className="text-white/45 text-[14px]">
                       Full Time • Kolkata • On Site
                     </p>
+
                   </div>
 
                   <div className="w-14 h-14 border border-white/10 flex items-center justify-center group-hover:border-[#c9ba9b33] transition-all duration-500">
@@ -254,20 +341,27 @@ export default function CareerPage() {
                       className="text-[#c9ba9b]"
                     />
                   </div>
+
                 </div>
+
               </Reveal>
             ))}
+
           </div>
+
         </div>
       </section>
 
       {/* APPLY FORM */}
       <section className="py-36 border-b border-white/10">
         <div className="container-main">
+
           <div className="grid lg:grid-cols-2 gap-24">
+
             {/* Left */}
             <Reveal>
               <div>
+
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-6 h-[1px] bg-[#c9ba9b]" />
 
@@ -286,6 +380,7 @@ export default function CareerPage() {
                 </p>
 
                 <div className="mt-16 space-y-8">
+
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.24em] text-[#c9ba9b] mb-3">
                       Email
@@ -305,15 +400,21 @@ export default function CareerPage() {
                       +91 9831406285
                     </p>
                   </div>
+
                 </div>
+
               </div>
             </Reveal>
 
             {/* Right Form */}
             <Reveal delay={0.1}>
+
               <div className="border border-white/10 bg-[#0e0e0c] p-10 md:p-14">
+
                 <form className="space-y-8">
+
                   <div className="grid md:grid-cols-2 gap-6">
+
                     <div>
                       <label className="block text-[11px] uppercase tracking-[0.24em] text-[#c9ba9b] mb-4">
                         Name
@@ -359,6 +460,7 @@ export default function CareerPage() {
                         "
                       />
                     </div>
+
                   </div>
 
                   <div>
@@ -380,6 +482,7 @@ export default function CareerPage() {
                         transition-all
                       "
                     >
+
                       <option
                         value="Senior Software Engineer"
                         className="bg-[#111]"
@@ -407,10 +510,12 @@ export default function CareerPage() {
                       >
                         UI/UX Designer
                       </option>
+
                     </select>
                   </div>
 
                   <div>
+
                     <label className="block text-[11px] uppercase tracking-[0.24em] text-[#c9ba9b] mb-4">
                       Message
                     </label>
@@ -432,9 +537,11 @@ export default function CareerPage() {
                         resize-none
                       "
                     />
+
                   </div>
 
                   <div>
+
                     <label className="block text-[11px] uppercase tracking-[0.24em] text-[#c9ba9b] mb-5">
                       Updated CV
                     </label>
@@ -453,7 +560,9 @@ export default function CareerPage() {
                         cursor-pointer
                       "
                     >
+
                       <div className="flex items-center gap-4">
+
                         <Upload
                           size={18}
                           className="text-[#c9ba9b]"
@@ -462,13 +571,16 @@ export default function CareerPage() {
                         <span className="text-white/45 text-[14px]">
                           Upload your resume
                         </span>
+
                       </div>
 
                       <input
                         type="file"
                         className="hidden"
                       />
+
                     </label>
+
                   </div>
 
                   <button
@@ -489,16 +601,22 @@ export default function CareerPage() {
                   >
                     Submit Application
                   </button>
+
                 </form>
+
               </div>
+
             </Reveal>
+
           </div>
+
         </div>
       </section>
 
       <CTA />
       <Newsletter />
       <Footer />
+
     </main>
   );
 }

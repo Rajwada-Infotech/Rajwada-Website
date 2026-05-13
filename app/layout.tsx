@@ -24,6 +24,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  icons:{
+    icon:"/images/favicon.png"
+  },
   title: "Rajwada Infotech",
   description: "Luxury ERP Website",
 };
