@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 pt-24">
+    <footer id="footer" className="border-t border-white/10 pt-24">
       <div className="container-main">
         
         {/* TOP GRID */}
@@ -92,9 +92,9 @@ export default function Footer() {
                 <p>info@rajwadainfotech.com</p>
 
                 <p>
-                  Windsor Greens Apartment,
+                168, Netaji Subhash Chandra Bose Rd,
                   <br />
-                  Mahamayatala, Kolkata — 700084
+                  Narendrapur, Rajpur Sonarpur, West Bengal 700103
                 </p>
               </div>
             </div>

@@ -10,16 +10,7 @@ export default function Hero() {
         pt-[170px]
       "
     >
-      {/* Grid */}
-      <div
-        className="
-          absolute
-          inset-0
-          opacity-[0.04]
-          bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)]
-          bg-[size:100px_100px]
-        "
-      />
+
 
       {/* Glow */}
       <div
