@@ -117,6 +117,55 @@ export default function Home() {
         }}
       />
 
+      {/* FLOATING RIGHT IMAGE */}
+      <div
+        className="
+          absolute
+          right-[9%]
+          top-[125px]
+          z-[5]
+          hidden
+          lg:block
+          animate-[float_6s_ease-in-out_infinite]
+        "
+      >
+        {/* GOLDEN GLOW */}
+        <div
+          className="
+            absolute
+            inset-0
+            rounded-full
+            blur-[90px]
+            opacity-40
+          "
+          style={{
+            background:
+              "radial-gradient(circle, rgba(180,130,60,0.35) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* IMAGE */}
+        <img
+  src="/images/home2.png"
+  alt="ERP Dashboard"
+  className="
+    relative
+    w-[400px]
+    rounded-[30px]
+    border
+    border-white/10
+    shadow-[0_0_60px_rgba(180,130,60,0.18)]
+    backdrop-blur-xl
+
+    hover:scale-105
+    transition
+    duration-500
+  "
+/>
+      </div>
+
+
+
       {/* CONTENT */}
       <div className="relative z-10">
         <Navbar />

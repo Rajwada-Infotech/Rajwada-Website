@@ -118,7 +118,8 @@ export default function Hero() {
               lg:grid-cols-[1fr_auto]
               gap-10
               items-end
-              pb-24
+              pb-10
+translate-y-10
             "
           >
             
@@ -148,7 +149,7 @@ export default function Hero() {
                 <div className="flex gap-12 mb-8">
                   
                   <div>
-                    <h3 className="serif text-[52px] leading-none text-[#d6c4a1]">
+                    <h3 className="serif text-[30px] leading-none text-[#d6c4a1]">
                       100+
                     </h3>
 
@@ -166,7 +167,7 @@ export default function Hero() {
                   </div>
 
                   <div>
-                    <h3 className="serif text-[52px] leading-none text-[#d6c4a1]">
+                    <h3 className="serif text-[30px] leading-none text-[#d6c4a1]">
                       24/7
                     </h3>
 
@@ -184,7 +185,7 @@ export default function Hero() {
                   </div>
 
                   <div>
-                    <h3 className="serif text-[52px] leading-none text-[#d6c4a1]">
+                    <h3 className="serif text-[38x] leading-none text-[#d6c4a1]">
                       PAN
                     </h3>
 
